@@ -15,4 +15,4 @@ build-local:
 	flask run
 
 test-local:
-	curl -X POST -H "Content-Type: text/json" -d @tests/data.json http://localhost:5000/api/infrastructure-request
+	curl -X POST -H "Content-Type: text/json" -d @tests/sample.json http://localhost:5000/api/infrastructure-request
