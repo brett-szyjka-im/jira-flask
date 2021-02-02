@@ -1,4 +1,5 @@
 import json
 
 def parseData(data):
-	return json.loads(data)
+	id = data['issue'][0]['id']
+	return id
