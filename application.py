@@ -1,10 +1,14 @@
 from flask import Flask
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def hello():
-	return "Hello, World!"
+	return 'Hello, World!'
 
-@app.route("/jira-hook")
-def hellojira():
-	return "Jira Hook endpoint"
+@app.route('/health')
+def health():
+	return 'healthy'
+
+@app.route('/jira-endpoint', methods=['POST'])
+def jiraEndpoint(payload):
+	print(payload)
