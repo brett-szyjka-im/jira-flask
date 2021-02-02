@@ -9,3 +9,7 @@ test:
 
 sync:
 	az webapp deployment source sync --resource-group jirahook --name pythonjirahook
+
+build-local:
+	pip3.8 install -r requirements.txt
+	flask run
