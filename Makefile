@@ -13,3 +13,6 @@ sync:
 build-local:
 	pip3.8 install -r requirements.txt
 	flask run
+
+test-local:
+	curl -X POST -H "Content-Type: text/json" -d @tests/data.json http://localhost:5000/api/infrastructure-request
