@@ -6,3 +6,6 @@ restart:
 
 test:
 	curl -X POST -H "Content-Type: text/json" -d @tests/data.json https://pythonjirahook.azurewebsites.net/api/infrastructure-request
+
+sync:
+	az webapp deployment source sync --resource-group jirahook --name pythonjirahook
