@@ -1,5 +1,5 @@
 from flask import Flask, request
-import infrastructure-request
+import infraRequest
 app = Flask(__name__)
 
 @app.route('/api/infrastructure-request', methods=['POST'])
