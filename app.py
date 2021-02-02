@@ -6,5 +6,5 @@ def hello():
 	return "Hello, World!"
 
 @app.route("/jira-hook")
-def hello():
+def hellojira():
 	return "Jira Hook endpoint"
