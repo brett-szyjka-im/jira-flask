@@ -5,6 +5,7 @@ app = Flask(__name__)
 def jiraEndpoint():
 	request_data = request.get_json()
 	print(request_data)
+	return "ok"
 
 @app.route('/health', methods=['GET'])
 def health():
