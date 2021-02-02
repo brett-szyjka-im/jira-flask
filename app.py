@@ -6,6 +6,7 @@ app = Flask(__name__)
 def jiraEndpoint():
 	request_data = request.get_data(as_text=True)
 	print(infraRequest.parseData(request_data))
+	return "ok"
 
 @app.route('/api/health', methods=['GET'])
 def health():
