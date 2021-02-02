@@ -1,12 +1,12 @@
 from flask import Flask, request
 app = Flask(__name__)
 
-@app.route('/jira-endpoint', methods=['POST'])
+@app.route('/api/infrastructure-request', methods=['POST'])
 def jiraEndpoint():
 	request_data = request.get_json()
 	print(request_data)
 	return "ok"
 
-@app.route('/health', methods=['GET'])
+@app.route('/api/health', methods=['GET'])
 def health():
 	return "healthy"
