@@ -44,22 +44,29 @@
 
 ### custom fields
 #### prefix for all of our custom fields: ir_
-- ir_appname
-- ir_image
-- ir_cpus
+- ir_appname: customfield_10060
+- ir_image: customfield_10061
+- ir_cpus: customfield_10062
   - the 'cpus' value represents the number of virtual compute cores that will be assigned to each provisioned vm
   - NOTE: jira doesn't seem to like the value '>8' in it's dropdown list for this field. possibly starting with a symbol?
-- ir_ram
+- ir_ram: customfield_10063
   - MB
   - the 'ram' value represents the amount of memory that will be assigned to each provisioned vm 
-- ir_environments
-  - the 'environments' value represents each environment that the requested vm cluster will be deployed to
+- ir_env: customfield_10064
+  - the 'env' value represents each environment that the requested vm cluster will be deployed to
   - to make it easier for now, we're going to create the same number of machines in each environment. I'm aware that this will probably have to change
   - another assumption that I'm making to speed things up is that the datacenter can be determined by the provided environment value (prod/stage=WJ, qa/dev=TX). I'm aware that this is going to change because that's one of our current concerns
-- ir_role
+- ir_role: customfield_10065
   - the 'role' value represents the server's role in the IM infrastructure. e.g. app, web, sql, etc
-- ir_nodes
+- ir_nodes: customfield_10066
   - the 'nodes' value represents the number of servers to be deployed to each environment
+- ir_network: customfield_10067
+  - the 'network' value is an identifier that represents the existing VNET that this vm will be provisioned to
+- ir_disk: customfield_10068
+  - the 'disk' value represents the amount of space provisioned for the vm on the startup disk
+  - we'll have to handle more complex disk configurations, but we can move that to a separate tab
+
+
 
 ### field configuration
 - infra-req_field_configuration
