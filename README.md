@@ -56,4 +56,20 @@
   - the 'environments' value represents each environment that the requested vm cluster will be deployed to
   - to make it easier for now, we're going to create the same number of machines in each environment. I'm aware that this will probably have to change
   - another assumption that I'm making to speed things up is that the datacenter can be determined by the provided environment value (prod/stage=WJ, qa/dev=TX). I'm aware that this is going to change because that's one of our current concerns
-- 
+- ir_role
+  - the 'role' value represents the server's role in the IM infrastructure. e.g. app, web, sql, etc
+- ir_nodes
+  - the 'nodes' value represents the number of servers to be deployed to each environment
+
+### field configuration
+- infra-req_field_configuration
+  - 
+
+### screens
+- intra-req_screen
+- infra-req_screen_scheme
+
+### issue_type
+- [Infra] Red Request
+- infra-req_issue_type_screen_scheme
+- infra-req_issue_type_scheme
