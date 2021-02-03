@@ -1,38 +1,38 @@
 fields:
   - cpus:
     name: cpus
-    field_id: 10062
+    key: 10062
     description: x
   - ram:
     name: ram
-    field_id: 10063
+    key: 10063
     description:
   - appname:
     name: appname
-    field_id: 10060
+    key: 10060
     description:
   - image:
     name: image
-    field_id: 10061
+    key: 10061
     description:
   - env:
     name: env
-    field_id: 10064
+    key: 10064
     description: 
   - role:
     name: role
-    field_id: 10065
+    key: 10065
     description: 
   - nodes:
     name: nodes
-    field_id: 10066
+    key: 10066
     description: 
   - network:
     name: network
-    field_id: 10067
+    key: 10067
     description: 
   - disk:
     name: disk
-    field_id: 10068
+    key: 10068
     description: 
 ---

@@ -11,8 +11,13 @@ sync:
 	az webapp deployment source sync --resource-group jirahook --name pythonjirahook
 
 build-local:
+	git merge development
 	pip3.8 install -r requirements.txt
 	flask run
+
+push:
+	git commit -m "autocommit"
+	git push
 
 test-local:
 	curl -X POST -H "Content-Type: text/json" -d @tests/sample.json http://localhost:5000/api/infrastructure-request
