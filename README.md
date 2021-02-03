@@ -1,5 +1,14 @@
 # flask-based web app for jira webhook infrastructure automation
 
+## pre-requisites
+- python 3.8 / pip
+	- code dependencies are installed via 'pip3.8 install -r requirements.txt' command
+
+### optional
+
+- az cli
+	- used in makefile scripts
+
 ## ci
 - this app is set to deploy via CI to https://pythonjirahook.azurewebsites.net/ from the _main_ branch
 
@@ -27,3 +36,24 @@
   - e.g. prod-4, stage-3
 - networking information?
 - role? (app vs web)
+
+## atlassian-jira details
+- [jira url](https://jiratestszyjka.atlassian.net)
+- [project url](https://jiratestszyjka.atlassian.net/jira/servicedesk/projects/IR)
+- webhook name: 
+
+### custom fields
+#### prefix for all of our custom fields: ir_
+- ir_appname
+- ir_image
+- ir_cpus
+  - the 'cpus' value represents the number of virtual compute cores that will be assigned to each provisioned vm
+  - NOTE: jira doesn't seem to like the value '>8' in it's dropdown list for this field. possibly starting with a symbol?
+- ir_ram
+  - MB
+  - the 'ram' value represents the amount of memory that will be assigned to each provisioned vm 
+- ir_environments
+  - the 'environments' value represents each environment that the requested vm cluster will be deployed to
+  - to make it easier for now, we're going to create the same number of machines in each environment. I'm aware that this will probably have to change
+  - another assumption that I'm making to speed things up is that the datacenter can be determined by the provided environment value (prod/stage=WJ, qa/dev=TX). I'm aware that this is going to change because that's one of our current concerns
+- 
